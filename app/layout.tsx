@@ -5,6 +5,7 @@ import { Toaster } from "sonner";
 import { cookies } from "next/headers";
 import RoutesLoading from "@/components/common/routes-loading";
 import { ThemeProvider } from "next-themes";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const tajawal = Tajawal({
   subsets: ["arabic", "latin"],
@@ -51,6 +52,7 @@ export default async function RootLayout({
           {children}
           <RoutesLoading />
           <Toaster />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
